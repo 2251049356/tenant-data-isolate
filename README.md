@@ -1,2 +1,2 @@
-# multi-tenant
-多租户解决方案
+# tenant-data-isolate
+多租户数据隔离解决方案
