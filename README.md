@@ -12,6 +12,15 @@ tenant-data-isolate则为每条数据都维护租户标识，以简化sql语句�
 ## 使用
 目前在spring cloud项目上实践。  
 1、引入依赖  
+把release中的jar文件下载。  
+maven中使用  
+`<dependency>
+    <groupId>com.wansy</groupId>
+    <artifactId>tenant-data-isolate</artifactId>
+    <version>1.0</version>
+    <scope>system</scope>
+    <systemPath>xxx</systemPath> <!-- jar文件路径 -->
+</dependency> `  
 2、创建业务数据表时加入字段：id_tenant varchar(100)。注意：最好是为id_tenant创建索引。  
 3、使用mybatis tenant拦截器  
 `@Bean
